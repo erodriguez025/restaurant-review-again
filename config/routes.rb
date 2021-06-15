@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     member do
       get "chef"
     end
+    resources :reviews, only: %i[new create]
   end
+  resources :reviews, only: %i[destroy]
 end
